@@ -106,26 +106,17 @@
 }
 
 
-/* Your CSS file, e.g., styles.css */
-
-.rows {
-  display: inline;
-  flex-direction: column;
+.rows .row {
+  display: inline-block;
+  gap: 16px;
   align-items: center;
-  gap: 16px; /* Adjust the gap between rows as needed */
+  margin: 0,20,0,20;
 }
 
-.row {
-  text-align: center;
-  display:inline;
-}
 
-/* Style the avatar (adjust dimensions and styles as needed) */
-.MuiAvatar-root {
-  width: 100px;
-  height: 100px;
+.avatar {
+  height: 50px;
+  width: 50px;
   border: 2px solid #007bff;
-  border-radius: 50%;
-  overflow: hidden;
 }
 

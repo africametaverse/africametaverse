@@ -22,7 +22,7 @@ export default function Welcome() {
         py: 6,
         px: 4,
         bgcolor: "#EAEFF1",
-        backgroundImage: "url(https://firebasestorage.googleapis.com/v0/b/africametaversemarketplace.appspot.com/o/background.png?alt=media&token=14644283-1c1c-4f5b-9ff7-c6877356f9a0)",
+        backgroundImage: "url(https://cdn.discordapp.com/attachments/1065680113573826580/1148581500166615062/HighresScreenshot00003.png)",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}

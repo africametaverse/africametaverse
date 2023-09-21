@@ -6,6 +6,7 @@ import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
 import "./App.css";
 import { NftWalletType, Storage } from "./nft.types";
 import Paperbase from "./Paperbase";
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { nat } from "./type-aliases";
 
 export type TZIP21TokenMetadata = TokenMetadata & {

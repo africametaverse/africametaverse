@@ -45,7 +45,7 @@ const ConnectButton = ({
   };
 
   return (
-    <div className="buttons">
+    <div>
       <button className="button" onClick={connectWallet}>
         <span>
           <i className="fas fa-wallet"></i>&nbsp; Connect with wallet

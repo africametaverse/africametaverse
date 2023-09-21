@@ -144,7 +144,7 @@ export default function MintPage() {
       }}
     >
       <Paper sx={{ maxWidth: 936, margin: "auto", overflow: "hidden" }}>
-        <form onSubmit={formik.handleSubmit}>
+        <form onSubmit={formik.handleSubmit} className="row g-3 needs-validation">
           <Stack spacing={2} margin={2} alignContent={"center"}>
             <h1>Mint your Assets collection</h1>
             <TextField
