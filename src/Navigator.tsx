@@ -118,27 +118,27 @@ export default function Navigator(props: DrawerProps) {
         </ListItem>
         {userAddress
           ? categories.map(({ id, children }) => (
-              <Box key={id} sx={{ bgcolor: "#101F33" }}>
-                <ListItem sx={{ py: 2, px: 3 }}>
-                  <ListItemText sx={{ color: "#fff" }}>{id}</ListItemText>
+            <Box key={id} sx={{ bgcolor: "#101F33" }}>
+              <ListItem sx={{ py: 2, px: 3 }}>
+                <ListItemText sx={{ color: "#fff" }}>{id}</ListItemText>
+              </ListItem>
+              {children.map(({ id: childId, icon, path }) => (
+                <ListItem
+                  selected={path === location.pathname}
+                  disablePadding
+                  key={childId}
+                >
+                  <ListItemButton sx={item}>
+                    <Link to={path}>
+                      <ListItemIcon>{icon}</ListItemIcon>
+                      <ListItemText>{childId}</ListItemText>
+                    </Link>
+                  </ListItemButton>
                 </ListItem>
-                {children.map(({ id: childId, icon, path }) => (
-                  <ListItem
-                    selected={path === location.pathname}
-                    disablePadding
-                    key={childId}
-                  >
-                    <ListItemButton sx={item}>
-                      <Link to={path}>
-                        <ListItemIcon>{icon}</ListItemIcon>
-                        <ListItemText>{childId}</ListItemText>
-                      </Link>
-                    </ListItemButton>
-                  </ListItem>
-                ))}
-                <Divider sx={{ mt: 2 }} />
-              </Box>
-            ))
+              ))}
+              <Divider sx={{ mt: 2 }} />
+            </Box>
+          ))
           : ""}
       </List>
     </Drawer>

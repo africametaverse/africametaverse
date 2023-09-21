@@ -31,6 +31,17 @@ export default function Header(props: HeaderProps) {
       <AppBar color="primary" position="sticky" elevation={0}>
         <Toolbar>
           <Grid container spacing={1} alignItems="center">
+            <Grid sx={{ display: { sm: "none", xs: "block" } }} item>
+              <IconButton
+                color="inherit"
+                aria-label="open drawer"
+                onClick={onDrawerToggle}
+                edge="start"
+              >
+                <MenuIcon />
+              </IconButton>
+            </Grid>
+            <Grid item xs />
             <Grid item>
               {!userAddress ? (
                 <ConnectButton

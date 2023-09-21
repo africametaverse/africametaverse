@@ -3,6 +3,7 @@ import Paper from "@mui/material/Paper";
 import React from "react";
 import { UserContext, UserContextType } from "./App";
 import ConnectButton from "./ConnectWallet";
+import { Container } from "@mui/material";
 
 export default function Welcome() {
   const {
@@ -26,9 +27,10 @@ export default function Welcome() {
         backgroundSize: "cover",
       }}
     >
-      <Paper sx={{ maxWidth: 936, margin: "auto", overflow: "hidden" }}>
-        <span>
-          Connect your wallet first
+      <Paper  className="header" sx={{ maxWidth: 936, margin: "auto", overflow: "hidden" }}>
+        <div className="centered-div">
+          <img src="Africa_Metaverse_logo_.png" alt="Logo" className="logo" width={650} height={250} />
+          <h1 className="title">Bienvenue dans Africa Metaverse NFT MarketPlace</h1>
           <ConnectButton
             Tezos={Tezos}
             setUserAddress={setUserAddress}
@@ -36,7 +38,7 @@ export default function Welcome() {
             wallet={wallet}
             nftContratTokenMetadataMap={nftContratTokenMetadataMap}
           />
-        </span>
+        </div>
       </Paper>
     </Box>
   );

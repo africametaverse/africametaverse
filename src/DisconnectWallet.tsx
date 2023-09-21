@@ -29,13 +29,18 @@ const DisconnectButton = ({
   };
 
   return (
-    <div>
-      <Avatar component="span" src={randomPicture} alt="My Avatar" />
-      {userAddress}
-      <button className="button" onClick={disconnectWallet}>
-        <i className="fas fa-times"></i>&nbsp; Disconnect wallet
-      </button>
+    <div className='rows'>
+      <div className='row'><Avatar component="span" src={randomPicture} alt="My Avatar" /></div>
+      <div className='row'>{userAddress}</div>
+      <div className='row'>
+        <button className="button" onClick={disconnectWallet}>
+        <span>
+          <i className="fas fa-wallet"></i>&nbsp; Connect with wallet
+        </span>
+        </button>
+      </div>
     </div>
+
   );
 };
 
